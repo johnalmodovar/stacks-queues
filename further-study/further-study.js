@@ -2,7 +2,26 @@ const Queue = require("../queue");
 const Stack = require("../stack");
 
 function stringReversal(str) {
+  let stack = new Stack();
+  let reversed = "";
+
+  for (let letter of str) {
+    stack.push(letter);
+  }
+
+
+  while (stack.size > 0) {
+    reversed += stack.pop();
+  }
+
+  return reversed;
 }
+
+/*
+psuedo for stringReversal:
+first stack: [h,e,l,l,o]
+second stack: [o,l,l,e,h]
+*/
 
 function balancedBrackets(str) {
 }
