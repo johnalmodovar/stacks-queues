@@ -34,7 +34,12 @@ describe("enqueue", function () {
     expect(queue.size).toBe(3);
   });
 });
-
+/**
+ * [10, 100, 1000]
+ *
+ * queue.dequeue() -> [100, 1000]
+ *
+ */
 describe("dequeue", function () {
   it("returns the value of the node removed", function () {
     queue.enqueue(10);
