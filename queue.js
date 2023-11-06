@@ -23,7 +23,7 @@ class Queue {
     const newNode = new Node(val);
 
     if (this.first === null) this.first = newNode;
-
+    if (this.last !== null) this.last.next = newNode;
     this.last = newNode;
     this.size += 1;
   }
@@ -31,10 +31,11 @@ class Queue {
   /** dequeue(): remove the node from the start of the queue
    * and return its value. Should throw an error if the queue is empty. */
 
-  dequeue() { //FIXME:
+  dequeue() {
     if (this.size === 0) throw new Error("Queue is empty");
 
     let temp = this.first.val;
+    console.log("this.first=", this.first)
     this.first = this.first.next;
     this.size -= 1;
     return temp;
@@ -43,13 +44,15 @@ class Queue {
   /** peek(): return the value of the first node in the queue. */
 
   peek() {
+    if (this.size === 0) throw new Error("Queue is empty");
+
     return this.first.val;
   }
 
   /** isEmpty(): return true if the queue is empty, otherwise false */
 
-  isEmpty() { //FIXME:
-    return size === 0;
+  isEmpty() {
+    return this.size === 0;
   }
 }
 

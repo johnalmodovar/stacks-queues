@@ -19,3 +19,13 @@ module.exports = {
   balancedBrackets,
   stringReversal,
 };
+
+/*
+Browser back/forward
+
+Push each site you visit, to go back you pop and push to the 2nd stack, and go to top of stack
+google, yahoo, ebay
+
+ebay, yahoo
+
+*/
