@@ -23,7 +23,23 @@ first stack: [h,e,l,l,o]
 second stack: [o,l,l,e,h]
 */
 
+/* "   "
+   ()[]
+   ([])
+   ((()))
+
+   (
+   (]
+   (()[)]
+
+   stack - ()
+           []
+           {}
+   queue -
+   deque - (()[)]
+*/
 function balancedBrackets(str) {
+
 }
 
 function josephusSurvivor(peopleNum, skip) {
